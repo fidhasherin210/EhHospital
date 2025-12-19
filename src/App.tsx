@@ -17,6 +17,7 @@ import ProtectedRoute from "./pages/Adminpage/ProtectedRoute";
 import AdminDashboard from "./pages/Adminpage/AdminDashboard";
 import DoctersAdmin from "./pages/Adminpage/DoctersAdmin";
 import EventsAdmin from "./pages/Adminpage/EventAdmin";
+import CourseAdmin from "./pages/Adminpage/CourseAdmin";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
              <Route path="/admindashboard" element={<AdminDashboard />} />
               <Route path="/doctersadmin" element={<DoctersAdmin />} />
               <Route path="/eventadmin" element={<EventsAdmin />} />
+              <Route path="/courseadmin" element={<CourseAdmin />} />
           </Route>
 
           {/* Example of protected route for AdminDashboard */}

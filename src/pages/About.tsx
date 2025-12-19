@@ -6,7 +6,7 @@ import { Target, Eye,  Calendar,  Award,
   Users, 
   Home, 
   Heart  } from "lucide-react";
-import hospitalInterior from "@/assets/hospital-interior.jpg";
+import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 
 const values = [
   {
@@ -32,10 +32,10 @@ const values = [
 ];
 
 const stats = [
-  { number: "10+", label: "Years of Service" },
-  { number: "50+", label: "Medical Experts" },
-  { number: "100K+", label: "Happy Patients" },
-  { number: "15+", label: "Departments" },
+  { number: "7+", label: "Years of Service" },
+  { number: "130+", label: "Medical Experts" },
+  { number: "200K+", label: "Happy Patients" },
+  { number: "10+", label: "Departments" },
 ];
 
 const events = [
@@ -72,9 +72,9 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-3xl md:text-6xl font-bold mb-4"
           >
-            About Excellence Health
+            About Elettil Hospital
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +127,7 @@ const About = () => {
         </h2>
 
         <p className="text-lg text-gray-600 mb-6">
-          Founded over <span className="font-semibold text-[#FF5733]">10 years ago</span>, Excellence Health Institute has been at
+          Founded over <span className="font-semibold text-[#FF5733]">7+ years ago</span>, Excellence Health Institute has been at
           the forefront of medical innovation and patient care. What started as
           a small community hospital has grown into a <span className="font-semibold text-[#4A5A6A]">leading healthcare
           institution</span>, serving thousands of patients every year.
@@ -350,3 +350,20 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

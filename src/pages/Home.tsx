@@ -22,7 +22,7 @@ import {
   Eye,
   HeartHandshake
 } from "lucide-react";
-import hospitalInterior from "@/assets/hospital-sample.jpg";
+import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 import { useState, useEffect } from "react";
 
 const features = [

@@ -28,7 +28,8 @@ const EventsAdmin = () => {
     setLoading(true);
     try {
       const data = await fetchTableData("events");
-      setEvents(data);
+      // Keep only 10 latest events
+      setEvents(data.slice(-10).reverse());
     } catch (err: any) {
       console.error(err);
       setMessage("Error fetching events");
@@ -98,6 +99,7 @@ const EventsAdmin = () => {
       }
 
       if (editEvent) {
+        // Updating existing event
         const { error } = await supabase
           .from("events")
           .update(payload)
@@ -106,9 +108,23 @@ const EventsAdmin = () => {
         if (error) throw error;
         setMessage("Event updated successfully");
       } else {
+        // Inserting new event
         const { error } = await supabase.from("events").insert([payload]);
         if (error) throw error;
         setMessage("Event created successfully");
+
+        // Auto-delete oldest if more than 10 events
+        const { data: allEvents } = await supabase
+          .from("events")
+          .select("*")
+          .order("id", { ascending: true });
+
+        if (allEvents && allEvents.length > 10) {
+          const excessEvents = allEvents.slice(0, allEvents.length - 10);
+          for (const ev of excessEvents) {
+            await deleteRecord("events", ev.id);
+          }
+        }
       }
 
       fetchEvents();
@@ -188,10 +204,7 @@ const EventsAdmin = () => {
                   <tr key={ev.id} className="hover:bg-gray-700">
                     <td className="p-3">
                       <img
-                        src={
-                          ev.image_url ||
-                          "https://via.placeholder.com/60"
-                        }
+                        src={ev.image_url || "https://via.placeholder.com/60"}
                         className="w-14 h-14 object-cover rounded"
                         alt={ev.heading}
                       />

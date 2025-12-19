@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroHospital from "@/assets/hero-hospital.jpg";
-import heroDoctors from "@/assets/hero-doctors.jpg";
-import heroEmergency from "@/assets/hero-emergency.jpg";
+import heroDoctors from "@/assets/academy-002.jpeg";
+import heroEmergency from "@/assets/elettil-hsptl-002.jpg";
 import { Link } from "react-router-dom";const slides = [
   {
   image: heroHospital,

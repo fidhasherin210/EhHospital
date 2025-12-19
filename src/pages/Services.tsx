@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-
+import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 import {
   Stethoscope,
   Heart,
@@ -71,8 +71,13 @@ const Services = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.3),transparent)]" />
+        <div className="absolute inset-0">
+          <img
+            src={hospitalInterior}
+            alt="Hospital"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#4A5A6A]/90 to-[#4A5A6A]/70" />
         </div>
         <div className="relative container text-center">
           <motion.h1

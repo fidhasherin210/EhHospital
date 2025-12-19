@@ -275,8 +275,8 @@ const DoctorsAdmin = () => {
               <th className="p-3 border-b border-gray-700">Name</th>
               <th className="p-3 border-b border-gray-700">Specialization</th>
               <th className="p-3 border-b border-gray-700">Education</th>
-              <th className="p-3 border-b border-gray-700">Phone</th>
-              <th className="p-3 border-b border-gray-700">Email</th>
+              {/* <th className="p-3 border-b border-gray-700">Phone</th>
+              <th className="p-3 border-b border-gray-700">Email</th> */}
               <th className="p-3 border-b border-gray-700">Actions</th>
             </tr>
           </thead>
@@ -299,8 +299,8 @@ const DoctorsAdmin = () => {
                   <td className="p-3 border-b border-gray-700 font-medium">{doctor.name}</td>
                   <td className="p-3 border-b border-gray-700">{doctor.specialization || "-"}</td>
                   <td className="p-3 border-b border-gray-700">{doctor.education || "-"}</td>
-                  <td className="p-3 border-b border-gray-700">{doctor.phone || "-"}</td>
-                  <td className="p-3 border-b border-gray-700">{doctor.email || "-"}</td>
+                  {/* <td className="p-3 border-b border-gray-700">{doctor.phone || "-"}</td>
+                  <td className="p-3 border-b border-gray-700">{doctor.email || "-"}</td> */}
                   <td className="p-3 border-b border-gray-700">
                     <div className="flex justify-center gap-2">
                       <Button 

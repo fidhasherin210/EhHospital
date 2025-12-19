@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Navigation } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-
+import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -34,8 +34,13 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#E84D3D]/5 to-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.3),transparent)]" />
+         <div className="absolute inset-0">
+          <img
+            src={hospitalInterior}
+            alt="Hospital"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#4A5A6A]/90 to-[#4A5A6A]/70" />
         </div>
         <div className="relative container text-center">
           <motion.h1
@@ -171,13 +176,35 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-[#E84D3D] hover:bg-[#d43d2d] text-white shadow-md hover:shadow-lg transition-all"
-                  >
-                    Send Message
-                  </Button>
+<Button
+  type="button"
+  size="lg"
+  className="w-full bg-[#E84D3D] hover:bg-[#d43d2d] text-white shadow-md hover:shadow-lg transition-all"
+  onClick={() => {
+    const phoneNumber = "917593955550";
+
+    const message = `
+New Enquiry 🏥
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+    `;
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  }}
+>
+  Send Message
+</Button>
+
+
                 </form>
               </Card>
             </motion.div>
@@ -217,51 +244,36 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Outpatient Services</span>
-                    <span className="font-semibold text-[#4A5A6A]">8:00 AM - 8:00 PM</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="h-6 w-6 rounded-lg bg-[#E84D3D] flex items-center justify-center">
+                        <Clock className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="font-semibold text-[#4A5A6A]">24/7</span>
+                    </div>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Pharmacy</span>
-                    <span className="font-semibold text-[#4A5A6A]">7:00 AM - 10:00 PM</span>
+                    
+                  <div className="flex items-center space-x-2">
+                      <div className="h-6 w-6 rounded-lg bg-[#E84D3D] flex items-center justify-center">
+                        <Clock className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="font-semibold text-[#4A5A6A]">24/7</span>
+                    </div>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Laboratory</span>
-                    <span className="font-semibold text-[#4A5A6A]">6:00 AM - 9:00 PM</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="h-6 w-6 rounded-lg bg-[#E84D3D] flex items-center justify-center">
+                        <Clock className="h-3 w-3 text-white" />
+                      </div>
+                      <span className="font-semibold text-[#4A5A6A]">24/7</span>
+                    </div>
                   </div>
                 </div>
               </Card>
 
-              {/* <Card className="p-6 bg-white border border-gray-200 shadow-md">
-                <h3 className="text-xl font-bold text-[#4A5A6A] mb-4">Additional Contact Numbers</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 rounded-lg bg-[#E84D3D] flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600">Appointment Desk</p>
-                      <p className="font-semibold text-[#4A5A6A]">0495 2200101</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 rounded-lg bg-[#E84D3D] flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600">Billing & Insurance</p>
-                      <p className="font-semibold text-[#4A5A6A]">0495 2200219</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-8 w-8 rounded-lg bg-[#E84D3D] flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-4 w-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600">Patient Information</p>
-                      <p className="font-semibold text-[#4A5A6A]">0495 2200220</p>
-                    </div>
-                  </div>
-                </div>
-              </Card> */}
+           
             </motion.div>
           </div>
         </div>
@@ -277,15 +289,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            {/* <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-[#E84D3D] mb-4 shadow-md">
-              <Navigation className="h-8 w-8 text-white" />
-            </div> */}
-            {/* <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-2">Find Us</h2> */}
-            {/* <p className="text-gray-600 text-lg mb-4">Visit us at our medical center</p>
-            <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#E84D3D]/10 text-[#E84D3D] font-medium">
-              <MapPin className="h-4 w-4 mr-2" />
-              Kizhakkoth, Elettil, Kerala 673572
-            </div> */}
+           
           </motion.div>
 
           <motion.div

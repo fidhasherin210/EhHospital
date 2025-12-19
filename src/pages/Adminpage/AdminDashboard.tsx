@@ -74,6 +74,7 @@ export default function AdminDashboard() {
 
               {/* Courses Button */}
               <div className="w-full md:w-1/3 max-w-xs md:max-w-none">
+                <Link to="/CourseAdmin">
                 <button
                   onClick={() => setCurrentPage('courses')}
                   className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-300 p-6 md:p-8 border-4 border-transparent hover:border-[#FF5733] w-full h-full"
@@ -86,6 +87,7 @@ export default function AdminDashboard() {
                     <p className="text-gray-500 mt-1 md:mt-2 text-xs md:text-sm text-center">Manage training courses</p>
                   </div>
                 </button>
+                </Link>
               </div>
             </div>
           </div>
