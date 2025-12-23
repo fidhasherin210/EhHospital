@@ -60,11 +60,11 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link to="/doctors" className="hover:text-[#E84D3D] transition-colors">
-                  Our Doctors
+               <li>
+                <Link to="/events" className="hover:text-[#E84D3D] transition-colors">
+                Events
                 </Link>
-              </li>
+              </li> 
               <li>
                 <Link to="/contact" className="hover:text-[#E84D3D] transition-colors">
                   Contact
@@ -77,11 +77,12 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>General Medicine</li>
-              <li>Cardiology</li>
-              <li>Ortho</li>
-              <li>Pediatrics</li>
-              <li>Emergency Care</li>
+              <li>EH Hospital</li>
+              <li>EH Academy</li>
+              <li>EH Hyperpharmacy</li>
+              <li>EH Eye Hospital</li>
+              <li>EH Physio & Rehab Center</li>
+              <li>NKM Trust</li>
             </ul>
           </div>
 

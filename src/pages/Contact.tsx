@@ -95,8 +95,8 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="h-full"
-              >
-                <Card className="p-6 text-center bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow h-full flex flex-col justify-between hover:border-[#E84D3D]/20">
+                 >
+             <Card className="p-6 text-center bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow h-full flex flex-col justify-between hover:border-[#E84D3D]/20">
                   <div>
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#E84D3D] mb-4 shadow-md">
                       <info.icon className="h-6 w-6 text-white" />

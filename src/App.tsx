@@ -8,7 +8,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Doctors from "./pages/Doctors";
+// import Doctors from "./pages/Doctors";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import AdminLogin from "./pages/Adminpage/AdminLogin";
@@ -33,7 +33,7 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/doctors" element={<Doctors />} />
+            {/* <Route path="/doctors" element={<Doctors />} /> */}
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<AdminLogin />} />

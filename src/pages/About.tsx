@@ -121,26 +121,46 @@ const About = () => {
       className="max-w-3xl mx-auto"
     >
       {/* Box with #FF5733 top border */}
-      <div className="bg-white rounded-lg shadow-lg border-t-4 border-[#FF5733] p-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-6 text-center">
-          Our Story
-        </h2>
+     <div className="bg-white rounded-lg shadow-lg border-t-4 border-[#FF5733] p-8">
+  <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-6 text-center">
+    Our Story
+  </h2>
 
-        <p className="text-lg text-gray-600 mb-6">
-          Founded over <span className="font-semibold text-[#FF5733]">7+ years ago</span>, Excellence Health Institute has been at
-          the forefront of medical innovation and patient care. What started as
-          a small community hospital has grown into a <span className="font-semibold text-[#4A5A6A]">leading healthcare
-          institution</span>, serving thousands of patients every year.
-        </p>
+  <p className="text-lg text-gray-600 mb-6">
+    <span className="font-semibold text-[#FF5733]">EH Hospital</span>, established in
+    <span className="font-semibold text-[#4A5A6A]"> 2018</span> at Elettil Vattoli,
+    was born out of a strong need for quality healthcare in the region.
+    What began as a small clinic has grown into a trusted healthcare institution,
+    serving thousands of patients across multiple panchayats and nearby towns.
+  </p>
 
-        <p className="text-lg text-gray-600">
-          Our journey has been guided by a simple principle: to provide
-          <span className="font-semibold text-[#FF5733]"> world-class healthcare</span>
-          that is accessible, affordable, and compassionate. Today, we continue to invest in cutting-edge technology,
-          attract top medical talent, and expand our services to meet the
-          evolving needs of our community.
-        </p>
-      </div>
+  <p className="text-lg text-gray-600 mb-6">
+    Built on deep community trust and a commitment to service, EH Hospital today
+    offers an emergency unit, specialty departments, a paramedical academy,
+    an eye hospital, and a hyper pharmacy — creating a comprehensive healthcare
+    ecosystem rooted in rural North Kerala.
+  </p>
+
+  <p className="text-lg text-gray-600 mb-6">
+    Building on this strong foundation, 
+    <span className="font-semibold text-[#FF5733]"> EH Mediversity</span> represents
+    the next phase of our vision — a large-scale, integrated healthcare and medical
+    education campus. The project includes a 
+    <span className="font-semibold text-[#4A5A6A]"> 200-bed multispecialty hospital</span>,
+    state-of-the-art infrastructure, and a government-recognized medical education
+    campus training over 500 students.
+  </p>
+
+  <p className="text-lg text-gray-600">
+    EH Mediversity is more than a hospital — it is a movement. A mission to deliver
+    <span className="font-semibold text-[#FF5733]"> affordable, world-class healthcare</span>
+    while creating education and employment opportunities in a climate-safe,
+    well-connected rural region. Backed by experienced leadership and strong
+    community engagement, we are shaping the future of healthcare and education
+    in North Kerala.
+  </p>
+</div>
+
     </motion.div>
   </div>
 </section>
@@ -169,11 +189,13 @@ const About = () => {
           </h3>
 
           <p className="text-gray-600">
-            To provide exceptional healthcare services that improve the quality 
-            of life for our patients and communities. We are committed to 
-            delivering compassionate, patient-centered care using the latest 
-            medical advances and technology while maintaining the highest 
-            standards of safety and ethics.
+        To deliver affordable, high-quality healthcare to every
+         section of society while fostering 
+        excellence in medical education and skill development.
+We are committed to compassionate patient care, 
+ethical practices, community well-being,
+and empowering future healthcare professionals through world-class 
+training in a rural yet globally connected ecosystem.
           </p>
 
         </Card>
@@ -197,11 +219,9 @@ const About = () => {
           </h3>
 
           <p className="text-gray-600">
-            To be recognized as the leading healthcare provider in our region, 
-            known for clinical excellence, innovation, and outstanding patient 
-            experience. We envision a future where quality healthcare is 
-            accessible to all, and where medical innovation continues to 
-            improve lives and communities.
+          To become a leading integrated healthcare and medical education hub in North Kerala, setting new standards in patient care, innovation, and accessibility.
+EH Mediversity envisions a future where rural communities receive world-class healthcare, medical education creates sustainable opportunities,
+ and health tourism bridges local impact with global reach.
           </p>
 
         </Card>
@@ -276,7 +296,7 @@ const About = () => {
               <Award className="h-8 w-8 md:h-10 md:w-10 text-white" />
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#4A5A6A] mb-3 md:mb-4">
-              Why Choose Elettil Hospital?
+              Why Choose Elettil Mediversity?
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
               We combine medical expertise with genuine care for our patients.
@@ -285,36 +305,37 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
-              { 
-                icon: Shield, 
-                text: "Experienced and board-certified physicians",
-                color: "bg-blue-50"
-              },
-              { 
-                icon: Award, 
-                text: "Advanced medical technology and equipment",
-                color: "bg-green-50"
-              },
-              { 
-                icon: Users, 
-                text: "Comprehensive range of medical services",
-                color: "bg-purple-50"
-              },
-              { 
-                icon: Heart, 
-                text: "Patient-centered care",
-                color: "bg-pink-50"
-              },
-              { 
-                icon: Clock, 
-                text: "24/7 emergency services",
-                color: "bg-orange-50"
-              },
-              { 
-                icon: Home, 
-                text: "Comfortable and modern facilities",
-                color: "bg-cyan-50"
-              },
+         {
+  icon: Shield,
+  text: "Trusted healthcare backed by experienced medical professionals",
+  color: "bg-blue-50"
+},
+{
+  icon: Award,
+  text: "State-of-the-art medical infrastructure and modern technology",
+  color: "bg-green-50"
+},
+{
+  icon: Users,
+  text: "Integrated multispecialty services under one ecosystem",
+  color: "bg-purple-50"
+},
+{
+  icon: Heart,
+  text: "Affordable, ethical, and patient-centered care",
+  color: "bg-pink-50"
+},
+{
+  icon: Clock,
+  text: "24/7 emergency and critical care services",
+  color: "bg-orange-50"
+},
+{
+  icon: Home,
+  text: "Comfortable, well-equipped, and community-focused facilities",
+  color: "bg-cyan-50"
+},
+
             ].map((item, index) => (
               <motion.div
                 key={index}

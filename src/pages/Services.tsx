@@ -20,7 +20,7 @@ const services = [
     icon: Stethoscope,
     title: "ELETTIL HOSPITAL",
     description:
-      "Comprehensive primary care services for adults, including routine check-ups, preventive care, and management of chronic conditions.",
+      "EH Hospital, founded in 2018 in Elettil Vattoli, is a multi-specialty center with 24/7 care, now expanded to include an Eye Hospital, Pharmacy, Rehab Center, and Academy.",
     features: ["Routine Check-ups", "Health Screenings", "Chronic Disease Management", "Preventive Care"],
     link: "/services/elettil-hospital",
   },
@@ -28,7 +28,7 @@ const services = [
     icon: Award,
     title: "EH ACADEMY",
     description:
-      "Expert cardiac care including diagnosis and treatment of heart conditions, advanced imaging, and cardiac rehabilitation programs.",
+      "EH Paramedical Academy, launched in 2021 with four courses, now offers seven programs to 200+ students. A new campus is underway to host 500+ students with modern labs, library, and hostels",
     features: ["ECG & Stress Tests", "Cardiac Imaging", "Heart Disease Treatment", "Rehabilitation"],
     link: "/services/eh-academy",
   },
@@ -36,7 +36,7 @@ const services = [
     icon: Eye,
     title: "EH EYE HOSPITAL",
     description:
-      "Specialized care for eyes, including vision correction, cataract surgery, and comprehensive eye exams.",
+      "Inaugurated on February 3, 2025, EH Eye Hospital offers full-time eye care, advanced surgeries, and a complete optical store, reflecting strong demand and future expansion potential for other specialties.",
     features: ["Eye Examinations", "Cataract Surgery", "Vision Correction", "Advanced Imaging"],
     link: "/services/eh-eye-hospital",
   },
@@ -44,7 +44,7 @@ const services = [
     icon: Pill,
     title: "EH HYPER PHARMACY",
     description:
-      "In-house pharmacy providing medications, health supplements, and consultation for safe and effective treatment.",
+      "Launched in 2022, the unit offers medical, wellness, and baby care products, including generics. Located opposite the hospital, it’s expanding into a regional network with plans for Hyper Opticals and future integration into the new hospital building.",
     features: ["Prescription Medications", "Health Supplements", "Pharmacist Consultations", "Home Delivery"],
     link: "/services/eh-hyper-pharmacy",
   },

@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/button";
 import heroHospital from "@/assets/hero-hospital.jpg";
 import heroDoctors from "@/assets/academy-002.jpeg";
 import heroEmergency from "@/assets/elettil-hsptl-002.jpg";
-import { Link } from "react-router-dom";const slides = [
+import { Link } from "react-router-dom";
+
+const slides = [
   {
   image: heroHospital,
   title: "Compassionate Care, Advanced Healing",
@@ -89,11 +91,11 @@ const HeroCarousel = () => {
                 Contact us
               </Button>
               </Link>
-              <Link to="/doctors">
+             {/* <Link to="/doctors">
               <Button size="lg" variant="outline" className="bg-bg-white/20 text-white hover:bg-[#d43d2d]">
                 Find a Doctor
               </Button>
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
