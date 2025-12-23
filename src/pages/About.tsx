@@ -8,6 +8,11 @@ import { Target, Eye,  Calendar,  Award,
   Heart  } from "lucide-react";
 import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 
+import emergencyRoom from "@/assets/emergency-001.jpg";
+import operationTheater from  "@/assets/operation-004.jpg";
+import laboratory from "@/assets/laboratery-002.png";
+import pharmacy from  "@/assets/hyperpharmacy-003.jpg";
+
 const values = [
   {
     icon: Heart,
@@ -52,7 +57,28 @@ const events = [
     location: "Conference Hall - Block B",
   },
 ];
-
+const facilities = [
+  {
+    image: emergencyRoom,
+    title: "24/7 Emergency Care",
+    description: "Round-the-clock emergency services with expert medical staff"
+  },
+  {
+    image: operationTheater,
+    title: "Advanced Operation Theaters",
+    description: "State-of-the-art surgical facilities with modern equipment"
+  },
+  {
+    image: laboratory,
+    title: "Diagnostic Laboratory",
+    description: "Comprehensive diagnostic services with accurate results"
+  },
+  {
+    image: pharmacy,
+    title: "Hyper Pharmacy",
+    description: "Well-stocked pharmacy with all essential medications"
+  }
+];
 const About = () => {
   return (
     <div className="min-h-screen pb-10">
@@ -164,7 +190,8 @@ const About = () => {
     </motion.div>
   </div>
 </section>
-
+   {/* Facilities Gallery Section */}
+  
 {/* Mission & Vision */}
 
 <section className="py-16 md:py-24 bg-gray-50">
@@ -231,6 +258,47 @@ EH Mediversity envisions a future where rural communities receive world-class he
   </div>
 </section>
 
+  <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Our Facilities</h2>
+            <p className="text-gray-600 text-lg">State-of-the-art infrastructure for comprehensive healthcare</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {facilities.map((facility, index) => (
+              <motion.div
+                key={facility.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={facility.image} 
+                      alt={facility.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="text-2xl font-bold mb-2">{facility.title}</h3>
+                      <p className="text-white/90">{facility.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
     {/* Core Values */}
 <section className="py-16 md:py-24">
@@ -284,13 +352,9 @@ EH Mediversity envisions a future where rural communities receive world-class he
       className="max-w-6xl mx-auto"
     >
       <div className="relative">
-        {/* Background decorative elements */}
-        
         <Card className="relative p-6 md:p-12 bg-white border border-gray-200 shadow-xl overflow-hidden">
-          {/* Top accent line */}
-          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to- from-[#E84D3D]"></div>
+          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#E84D3D] to-[#FF6B6B]"></div>
           
-          {/* Header with ee color background and white icon */}
           <div className="text-center mb-8 md:mb-10">
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#E84D3D] mb-4 md:mb-6 shadow-lg">
               <Award className="h-8 w-8 md:h-10 md:w-10 text-white" />
@@ -305,37 +369,36 @@ EH Mediversity envisions a future where rural communities receive world-class he
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
-         {
-  icon: Shield,
-  text: "Trusted healthcare backed by experienced medical professionals",
-  color: "bg-blue-50"
-},
-{
-  icon: Award,
-  text: "State-of-the-art medical infrastructure and modern technology",
-  color: "bg-green-50"
-},
-{
-  icon: Users,
-  text: "Integrated multispecialty services under one ecosystem",
-  color: "bg-purple-50"
-},
-{
-  icon: Heart,
-  text: "Affordable, ethical, and patient-centered care",
-  color: "bg-pink-50"
-},
-{
-  icon: Clock,
-  text: "24/7 emergency and critical care services",
-  color: "bg-orange-50"
-},
-{
-  icon: Home,
-  text: "Comfortable, well-equipped, and community-focused facilities",
-  color: "bg-cyan-50"
-},
-
+              {
+                icon: Shield,
+                text: "Trusted healthcare backed by experienced medical professionals",
+                color: "bg-blue-50"
+              },
+              {
+                icon: Award,
+                text: "State-of-the-art medical infrastructure and modern technology",
+                color: "bg-green-50"
+              },
+              {
+                icon: Users,
+                text: "Integrated multispecialty services under one ecosystem",
+                color: "bg-purple-50"
+              },
+              {
+                icon: Heart,
+                text: "Affordable, ethical, and patient-centered care",
+                color: "bg-pink-50"
+              },
+              {
+                icon: Clock,
+                text: "24/7 emergency and critical care services",
+                color: "bg-orange-50"
+              },
+              {
+                icon: Home,
+                text: "Comfortable, well-equipped, and community-focused facilities",
+                color: "bg-cyan-50"
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -346,12 +409,14 @@ EH Mediversity envisions a future where rural communities receive world-class he
                 className="h-full"
               >
                 <div className={`p-4 md:p-6 rounded-xl border border-gray-100 ${item.color} hover:shadow-lg transition-all duration-300 h-full hover:border-[#E84D3D]/20`}>
-                  <div className="flex items-start">
-                    {/* Icon container with ee color background and white icon */}
-                    <div className="h-8 w-8 md:h-12 md:w-12 lg:h-14 lg:w-14 rounded-lg bg-[#E84D3D] flex items-center justify-center mr-3 md:mr-4 flex-shrink-0 shadow-md">
-                      <item.icon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white" />
-                    </div>
-                    <span className="text-xs md:text-sm text-gray-700 font-medium pt-0.5 md:pt-1 leading-tight">
+                  {/* CHANGED HERE: Mobile center, desktop flex-start */}
+                  <div className="flex flex-col md:flex-row md:items-start items-center text-center md:text-left">
+                    {/* Icon container - mobile: center, desktop: left */}
+<div className="h-8 w-8 md:h-12 md:w-12 lg:h-14 lg:w-14 rounded-lg bg-[#E84D3D] flex items-center justify-center flex-shrink-0 shadow-md md:mr-3 lg:mr-4 mb-2 md:mb-0">
+  <item.icon className="h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white" />
+</div>
+                    
+                    <span className="text-xs md:text-sm text-gray-700 font-medium pt-0 md:pt-1 leading-tight">
                       {item.text}
                     </span>
                   </div>
