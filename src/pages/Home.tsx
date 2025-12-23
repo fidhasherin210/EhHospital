@@ -285,12 +285,7 @@ const Home = () => {
             >
               <Card className="p-6 bg-white border-0 shadow-md h-full flex flex-col justify-between">
                 <div>
-                  <div className="flex justify-center mb-4">
-                    <img 
-                      alt={testimonials[currentTestimonialIndex].name}
-                      className="w-16 h-16 rounded-full border-4 border-[#E84D3D]/20"
-                    />
-                  </div>
+                 
                   <div className="flex mb-4 justify-center">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 fill-[#E84D3D] text-[#E84D3D] mx-1" />

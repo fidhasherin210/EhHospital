@@ -61,12 +61,12 @@ const HeroCarousel = () => {
             alt={slides[currentSlide].title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/50 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-800/20 to-slate-800/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/10" />
       
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center ">
