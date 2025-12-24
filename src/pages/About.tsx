@@ -5,8 +5,9 @@ import { Target, Eye,  Calendar,  Award,
   Shield, 
   Users, 
   Home, 
-  Heart  } from "lucide-react";
-import hospitalInterior from "@/assets/elettil-hospital.jpeg";
+  Heart ,
+Sparkles } from "lucide-react";
+import hospitalInterior from "@/assets/eh-mediversity-01.jpeg";
 
 import emergencyRoom from "@/assets/emergency-001.jpg";
 import operationTheater from  "@/assets/operation-004.jpg";
@@ -81,10 +82,10 @@ const facilities = [
 ];
 const About = () => {
   return (
-    <div className="min-h-screen pb-10">
+    <div className="min-h-screen">
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[250px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={hospitalInterior}
@@ -98,7 +99,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-6xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
             About Elettil Hospital
           </motion.h1>
@@ -106,7 +107,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/90"
+            className="text-lg md:text-lg text-white/90"
           >
             Committed to Excellence in Healthcare
           </motion.p>
@@ -148,9 +149,13 @@ const About = () => {
     >
       {/* Box with #FF5733 top border */}
      <div className="bg-white rounded-lg shadow-lg border-t-4 border-[#FF5733] p-8">
-  <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-6 text-center">
-    Our Story
-  </h2>
+  
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] text-center pb-2">
+    Our  {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+   Story
+  </span>
+</h2> 
 
   <p className="text-lg text-gray-600 mb-6">
     <span className="font-semibold text-[#FF5733]">EH Hospital</span>, established in
@@ -267,8 +272,12 @@ EH Mediversity envisions a future where rural communities receive world-class he
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Our Facilities</h2>
-            <p className="text-gray-600 text-lg">State-of-the-art infrastructure for comprehensive healthcare</p>
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] text-center pb-2">
+    Our  {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+   Facilities
+  </span>
+</h2>            <p className="text-gray-600 text-lg">State-of-the-art infrastructure for comprehensive healthcare</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -310,7 +319,12 @@ EH Mediversity envisions a future where rural communities receive world-class he
       transition={{ duration: 0.6 }}
       className="text-center mb-12"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Our Core Values</h2>
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] text-center pb-2">
+    Our  {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+   Core Values
+  </span>
+</h2>
       <p className="text-gray-600 text-lg">The principles that guide everything we do</p>
     </motion.div>
 
@@ -359,9 +373,12 @@ EH Mediversity envisions a future where rural communities receive world-class he
             <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#E84D3D] mb-4 md:mb-6 shadow-lg">
               <Award className="h-8 w-8 md:h-10 md:w-10 text-white" />
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#4A5A6A] mb-3 md:mb-4">
-              Why Choose Elettil Mediversity?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] text-center pb-2">
+    Why Choose   {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+   Elettil Mediversity?
+  </span>
+</h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
               We combine medical expertise with genuine care for our patients.
             </p>

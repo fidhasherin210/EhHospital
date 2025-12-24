@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroHospital from "@/assets/hero-hospital.jpg";
-import heroDoctors from "@/assets/academy-002.jpeg";
-import heroEmergency from "@/assets/elettil-hsptl-002.jpg";
+import heroHospital from "@/assets/elettil-mediversity.jpeg";
+import heroDoctors from "@/assets/eh-mediversity-01.jpeg";
+import heroEmergency from "@/assets/eh-mediversity-03.jpeg";
 import { Link } from "react-router-dom";
 
 const slides = [
@@ -46,7 +46,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative h-[600px] md:h-[500px] overflow-hidden">
+    <div className="relative h-[600px] md:h-[480px] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -59,7 +59,8 @@ const HeroCarousel = () => {
           <img
             src={slides[currentSlide].image}
             alt={slides[currentSlide].title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover "
+            style={{ objectPosition: "center 90%" }} 
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/50 to-transparent" />
         </motion.div>

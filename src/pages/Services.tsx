@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import hospitalInterior from "@/assets/elettil-hospital.jpeg";
+import hospitalInterior from "@/assets/eh-mediversity-03.jpeg";
 import {
   Stethoscope,
   Heart,
@@ -70,7 +70,7 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
+      <section className="relative py-20 md:py-26 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={hospitalInterior}
@@ -84,7 +84,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-4xl md:text-4xl font-bold mb-4"
           >
             Our Medical Services
           </motion.h1>
@@ -92,7 +92,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
+            className="text-lg md:text-lg text-white/90 max-w-2xl mx-auto"
           >
             Comprehensive healthcare solutions tailored to your needs
           </motion.p>

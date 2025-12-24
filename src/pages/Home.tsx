@@ -20,13 +20,14 @@ import {
   Building2,
   GraduationCap,
   Eye,
-  HeartHandshake
+  HeartHandshake,
+  
 } from "lucide-react";
-import hospitalInterior from "@/assets/elettil-hospital.jpeg";
+import hospitalInterior from "@/assets/eh-mediversity-03.jpeg";
 import medicalBg from '@/assets/pharmacist.jpg';
-import doctorTeam from '@/assets/doctors-discussing.jpg'; // Add doctor team image
-import modernEquipment from '@/assets/feciliteas.jpg'; // Add equipment image
-import patientCare from '@/assets/24hvrs.jpg'; // Add patient care image
+import doctorTeam from '@/assets/doctors-discussing.jpg'; 
+import modernEquipment from '@/assets/feciliteas.jpg'; 
+import patientCare from '@/assets/24hvrs.jpg';
 import { useState, useEffect } from "react";
 
 const features = [
@@ -112,7 +113,13 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Our Specialties</h2>
+    <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] ">
+   Our{" "}
+  <span className="bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] bg-clip-text text-transparent">
+    Specialties
+  </span>
+</h2>
+
             <p className="text-gray-600 text-lg">Comprehensive healthcare services for all your needs</p>
           </motion.div>
 
@@ -182,8 +189,12 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Welcome to our multi-service center</h2>
-              <p className="text-gray-600 text-base mb-6 leading-relaxed">
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] ">
+   Welcome to our{" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+    Multi-service center
+  </span>
+</h2>              <p className="text-gray-600 text-base mb-6 leading-relaxed">
                 We are committed to providing exceptional healthcare services through 
                 Elettil Hospital, EH Academy, EH Eye Hospital, EH Hyper Pharmacy, 
                 EH Physio & Rehab Centre, and NKM Trust. Our focus is on patient comfort, 
@@ -219,8 +230,12 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">Why Choose Us</h2>
-            <p className="text-gray-600 text-lg">Expert Doctors, Modern Care, Trusted Results.</p>
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] ">
+   Why {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+    Choose Us
+  </span>
+</h2>            <p className="text-gray-600 text-lg">Expert Doctors, Modern Care, Trusted Results.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -272,8 +287,13 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] mb-4">What Our Patients Say</h2>
-            <p className="text-gray-600 text-lg">Real stories from real patients</p>
+ <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] ">
+   What Our  {" "}
+  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+   Patients Say
+  </span>
+</h2>   
+         <p className="text-gray-600 text-lg">Real stories from real patients</p>
           </motion.div>
 
           {/* Mobile: Single testimonial */}

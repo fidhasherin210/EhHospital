@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Navigation } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import hospitalInterior from "@/assets/elettil-hospital.jpeg";
+import hospitalInterior from "@/assets/eh-mediversity-02.jpeg";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#E84D3D]/5 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
+      <section className="relative py-20 md:py-26 bg-gradient-to-r from-[#E84D3D] to-[#4A5A6A] text-white overflow-hidden">
          <div className="absolute inset-0">
           <img
             src={hospitalInterior}
@@ -47,7 +47,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-4xl md:text-4xl font-bold mb-4"
           >
             Contact Us
           </motion.h1>
@@ -55,7 +55,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto"
+            className="text-lg md:text-lg text-white/90 max-w-2xl mx-auto"
           >
             We're here to help. Reach out to us for appointments or inquiries
           </motion.p>
