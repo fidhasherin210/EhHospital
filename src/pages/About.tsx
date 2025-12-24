@@ -10,7 +10,7 @@ import hospitalInterior from "@/assets/elettil-hospital.jpeg";
 
 import emergencyRoom from "@/assets/emergency-001.jpg";
 import operationTheater from  "@/assets/operation-004.jpg";
-import laboratory from "@/assets/laboratery-002.png";
+import laboratory from "@/assets/laboratery-002.jpg";
 import pharmacy from  "@/assets/hyperpharmacy-003.jpg";
 
 const values = [
