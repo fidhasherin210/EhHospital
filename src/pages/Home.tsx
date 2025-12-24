@@ -47,24 +47,25 @@ const specialties = [
 ];
 
 const testimonials = [
-  { 
-    name: "Anjana S. Nair", 
-    text: "The immediate care my child received during a late-night emergency was exceptional. The pediatric team was compassionate and professional.", 
-    rating: 5,
-    role: "Mother of Two"
-  },
-  { 
-    name: "Rajeev Menon", 
-    text: "Advanced cardiology treatment and detailed patient care helped me recover fully from heart surgery. Highly recommended.", 
-    rating: 5,
-    role: "Business Executive"
-  },
-  { 
-    name: "Harikumar", 
-    text: "After suffering from knee pain for years, the orthopedic department's modern treatment and physiotherapy gave me complete relief.", 
-    rating: 5,
-    role: "Retired Teacher"
-  }
+{ 
+  name: "Ayesha Rahman", 
+  text: "The immediate care my child received during a late-night emergency was exceptional. The pediatric team was compassionate and professional.", 
+  rating: 5,
+  role: "Mother of Two"
+},
+{ 
+  name: "Muhammed Shafi", 
+  text: "Advanced cardiology treatment and detailed patient care helped me recover fully from heart surgery. Highly recommended.", 
+  rating: 5,
+  role: "Business Executive"
+},
+{ 
+  name: "Abdul Kareem", 
+  text: "After suffering from knee pain for years, the orthopedic department's modern treatment and physiotherapy gave me complete relief.", 
+  rating: 5,
+  role: "Retired Teacher"
+}
+
 ];
 
 const Home = () => {
