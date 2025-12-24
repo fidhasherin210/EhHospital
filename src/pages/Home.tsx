@@ -235,11 +235,13 @@ const Home = () => {
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 card-hover border-0 bg-white h-full group">
                   {/* Image Section */}
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                  <img 
+  src={feature.image}
+  alt={feature.title}
+  loading="lazy"
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+/>
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm">
