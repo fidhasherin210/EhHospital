@@ -48,20 +48,19 @@ const specialties = [
 
 const testimonials = [
 { 
-  name: "Ayesha Rahman", 
-  text: "The immediate care my child received during a late-night emergency was exceptional. The pediatric team was compassionate and professional.", 
+  name: "SALIM C P", 
+  text: "It is a very good hospital good service,and there are experienced docters.My family has had about 10 deliveries there Mashaallah good service ", 
   rating: 5,
-  role: "Mother of Two"
 },
 { 
-  name: "Muhammed Shafi", 
-  text: "Advanced cardiology treatment and detailed patient care helped me recover fully from heart surgery. Highly recommended.", 
+  name: "Sufaira Sufi", 
+  text: "Budget friendly hospital and good atmosphere.Good experience from dr.jabira(Gynacologist).", 
   rating: 5,
-  role: "Business Executive"
+ 
 },
 { 
-  name: "Abdul Kareem", 
-  text: "After suffering from knee pain for years, the orthopedic department's modern treatment and physiotherapy gave me complete relief.", 
+  name: "Fathima Risha", 
+  text: "The services at EH Hoospital,which has changed the face of vattoli in Elat,are all excellent.I wish that a rural hospital where poor patients can go with comfort will always be with the people with better treatment systems", 
   rating: 5,
   role: "Retired Teacher"
 }
@@ -279,92 +278,82 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section with avatars */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
+        <section className="py-16 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A]">
+            What Our{" "}
+            <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
+              Patients Say
+            </span>
+          </h2>
+          <p className="text-gray-600 text-lg mt-2">
+            Real stories from real patients
+          </p>
+        </motion.div>
+
+        {/* Slider */}
+        <div className="flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            key={currentTestimonialIndex}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="w-full max-w-xl mb-8"
           >
- <h2 className="text-3xl md:text-4xl font-bold text-[#4A5A6A] ">
-   What Our  {" "}
-  <span className="bg-gradient-to-r from-[#da5243] to-[#4A5A6A] bg-clip-text text-transparent">
-   Patients Say
-  </span>
-</h2>   
-         <p className="text-gray-600 text-lg">Real stories from real patients</p>
+            <Card className="p-6 bg-white border-0 shadow-md h-full flex flex-col justify-between">
+              <div>
+                {/* Stars */}
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentTestimonialIndex].rating)].map(
+                    (_, i) => (
+                      <Star
+                        key={i}
+                        className="h-5 w-5 fill-[#E84D3D] text-[#E84D3D] mx-1"
+                      />
+                    )
+                  )}
+                </div>
+
+                {/* Review */}
+                <p className="text-gray-600 mb-4 text-center italic">
+                  "{testimonials[currentTestimonialIndex].text}"
+                </p>
+              </div>
+
+              {/* Name */}
+              <p className="font-semibold text-[#4A5A6A] text-center">
+                {testimonials[currentTestimonialIndex].name}
+              </p>
+            </Card>
           </motion.div>
 
-          {/* Mobile: Single testimonial */}
-          <div className="block md:hidden">
-            <motion.div
-              key={currentTestimonialIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="h-full mb-8"
-            >
-              <Card className="p-6 bg-white border-0 shadow-md h-full flex flex-col justify-between">
-                <div>
-                 
-                  <div className="flex mb-4 justify-center">
-                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-[#E84D3D] text-[#E84D3D] mx-1" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-4 text-center italic">"{testimonials[currentTestimonialIndex].text}"</p>
-                </div>
-                <p className="font-semibold text-[#4A5A6A] text-center">{testimonials[currentTestimonialIndex].name}</p>
-              </Card>
-            </motion.div>
-
-            {/* Navigation dots for mobile */}
-            <div className="flex justify-center space-x-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonialIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentTestimonialIndex === index 
-                      ? 'bg-[#E84D3D] w-8' 
-                      : 'bg-gray-300'
-                  }`}
-                  aria-label={`Show testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop - Show all testimonials */}
-          <div className="hidden md:grid grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="h-full"
-              >
-                <Card className="p-6 bg-white border-0 shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col justify-between">
-                  <div>
-                   
-                    <div className="flex mb-4 justify-center">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-[#E84D3D] text-[#E84D3D]" />
-                      ))}
-                    </div>
-                    <p className="text-gray-600 mb-4 text-center italic">"{testimonial.text}"</p>
-                  </div>
-                  <p className="font-semibold text-[#4A5A6A] text-center">{testimonial.name}</p>
-                </Card>
-              </motion.div>
+          {/* Dots */}
+          <div className="flex justify-center space-x-3">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonialIndex(index)}
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  currentTestimonialIndex === index
+                    ? "bg-[#E84D3D] w-8"
+                    : "bg-gray-300 w-3"
+                }`}
+                aria-label={`Show testimonial ${index + 1}`}
+              />
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 };
